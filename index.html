@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Happy Birthday 🎂</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        body {
+            margin: 0;
+            min-height: 100vh;
+            overflow-x: hidden;
+            text-align: center;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            animation: bgSlider 20s infinite;
+        }
+        
+        @keyframes bgSlider {
+            0% {
+                background-image: url("o4.jpeg");
+                background-size: contain;
+            }
+            15% {
+                background-image: url("o2.jpeg");
+            }
+            20% {
+                background-image: url("o3.jpeg");
+            }
+            25% {
+                background-image: url("m8.jpeg");
+            }
+            30% {
+                background-image: url("o9.jpeg");
+            }
+            40% {
+                background-image: url("r7.jpeg");
+            }
+            50% {
+                background-image: url("o4.jpeg");
+                background-size: contain;
+            }
+            55% {
+                background-image: url("m1.jpeg");
+            }
+            80% {
+                background-image: url("m4.jpeg");
+            }
+            100% {
+                background-image: url("m5.jpeg");
+            }
+        }
+        
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        /* Heading */
+        
+        h1 {
+            margin-top: 40px;
+            font-family: 'Pacifico', cursive;
+            font-size: clamp(2rem, 6vw, 4rem);
+            color: #fff;
+            text-shadow: 0 0 15px #ff4081;
+            animation: fadeDown 1.5s ease;
+        }
+        
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Message Glass Card */
+        
+        .message {
+            margin: 30px auto;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px 30px;
+            font-size: clamp(1rem, 3vw, 1.3rem);
+            color: #fff;
+            background: transparent;
+            border-radius: 20px;
+            box-shadow: 20px 30px 50px 32px rgba(156, 155, 155, 0.2);
+            animation: fadeUp 1.5s ease;
+        }
+        
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        /* Cake */
+        
+        .cake {
+            margin: 80px auto;
+            width: 260px;
+            position: relative;
+            animation: floatCake 4s ease-in-out infinite;
+            filter: drop-shadow(0 25px 30px rgba(0, 0, 0, 0.3));
+        }
+        /* Floating animation */
+        
+        @keyframes floatCake {
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        /* Cake layers */
+        
+        .layer {
+            height: 70px;
+            border-radius: 20px;
+            margin: 8px 0;
+            position: relative;
+        }
+        
+        .layer1 {
+            background: linear-gradient(to right, #ff9a9e, #fecfef);
+        }
+        
+        .layer2 {
+            background: linear-gradient(to right, #a18cd1, #fbc2eb);
+        }
+        
+        .layer3 {
+            background: linear-gradient(to right, #f6d365, #fda085);
+        }
+        /* Cream icing on top */
+        
+        .top-icing {
+            height: 40px;
+            background: linear-gradient(to right, #fff, #ffe6f0);
+            border-radius: 50% 50% 20px 20px;
+            position: absolute;
+            top: -20px;
+            width: 100%;
+            z-index: 2;
+        }
+        /* Icing drip effect */
+        
+        .top-icing::before,
+        .top-icing::after {
+            content: '';
+            position: absolute;
+            background: #fff;
+            width: 25px;
+            height: 40px;
+            border-radius: 20px;
+            top: 25px;
+        }
+        
+        .top-icing::before {
+            left: 40px;
+        }
+        
+        .top-icing::after {
+            right: 40px;
+        }
+        /* Candles container */
+        
+        .candles {
+            position: absolute;
+            top: -90px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        /* Candle body */
+        
+        .candle {
+            width: 12px;
+            height: 60px;
+            background: repeating-linear-gradient( 45deg, #fff, #fff 5px, #ff4d6d 5px, #ff4d6d 10px);
+            border-radius: 5px;
+            position: relative;
+        }
+        /* Flame */
+        
+        .flame {
+            width: 18px;
+            height: 25px;
+            background: radial-gradient(circle, #ffff99 20%, #ff9900 60%, #ff3300 100%);
+            border-radius: 50% 50% 50% 50%;
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: flicker 0.15s infinite alternate;
+            box-shadow: 0 0 20px #ff9900;
+        }
+        /* Realistic flicker */
+        
+        @keyframes flicker {
+            from {
+                transform: translateX(-50%) scale(1);
+                opacity: 1;
+            }
+            to {
+                transform: translateX(-50%) scale(1.2);
+                opacity: 0.85;
+            }
+        }
+        
+        @keyframes pop {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .layer {
+            height: 60px;
+            margin: 8px 0;
+            border-radius: 15px;
+            background: linear-gradient(to right, #ff6f61, #ff9472);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .candle {
+            width: 14px;
+            height: 60px;
+            background: white;
+            position: absolute;
+            top: -60px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 5px;
+        }
+        
+        .flame {
+            width: 18px;
+            height: 18px;
+            background: radial-gradient(circle, yellow, orange, red);
+            border-radius: 50%;
+            position: absolute;
+            top: -18px;
+            left: -2px;
+            animation: flicker .2s infinite alternate;
+        }
+        
+        @keyframes flicker {
+            from {
+                transform: scale(1);
+            }
+            to {
+                transform: scale(1.2);
+            }
+        }
+        /* Gallery */
+        
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            max-width: 1000px;
+            margin: auto;
+        }
+        
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 1/1;
+            object-fit: cover;
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, .3);
+            transition: .5s;
+        }
+        
+        .gallery img:hover {
+            transform: scale(1.1) rotate(3deg);
+        }
+        /* Balloons */
+        
+        .balloon {
+            width: 50px;
+            height: 70px;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -100px;
+            animation: float 10s linear infinite;
+        }
+        
+        .balloon::after {
+            content: '';
+            width: 2px;
+            height: 60px;
+            background: #555;
+            position: absolute;
+            left: 50%;
+            top: 70px;
+        }
+        
+        @keyframes float {
+            from {
+                transform: translateY(0);
+            }
+            to {
+                transform: translateY(-120vh);
+            }
+        }
+        /* Confetti */
+        
+        .confetti {
+            position: fixed;
+            width: 8px;
+            height: 12px;
+            top: -20px;
+            animation: fall linear infinite;
+        }
+        
+        @keyframes fall {
+            to {
+                transform: translateY(110vh) rotate(720deg);
+            }
+        }
+        /* Responsive Tweaks */
+        
+        @media(max-width:500px) {
+            .cake {
+                width: 150px;
+            }
+        }
+        
+        .music-btn {
+            height: 100px;
+            width: 200px;
+            color: rgb(251, 247, 251);
+            border: 2px solid rgb(231, 20, 55);
+            font-size: 30px;
+            font-weight: 700;
+            background-image: url(r5.jpeg);
+            background-position: center;
+            background-size: cover;
+            border-radius: 50px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.4s ease;
+            animation: float 3s ease-in-out infinite;
+        }
+        /* Hover effect */
+        
+        .music-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 25px pink;
+        }
+        /* Click effect */
+        
+        .music-btn:active {
+            transform: scale(0.95);
+            transform: rotate(360 deg);
+        }
+        /* Floating animation */
+        
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 style="font-size: 100px">🎉 Happy Birthday <b style="color: red;">মহারানী</b>🎂</h1>
+    <button class="music-btn" onclick="document.getElementById('bgMusic').play()">
+  Play Music
+</button>
+
+    <audio id="bgMusic" loop>
+  <source src="rimi.mpeg" type="audio/mpeg">
+</audio>
+
+    <div class="message">
+        <b style=" color: #f33304;font-size:40px;font-weight: 600;"> <i style="color:red;">Rima , মহারানী</i>  Wishing you a day filled with love, laughter, and unforgettable memories 💖 May all your dreams come true ✨</b>
+    </div>
+
+    <div class="cake">
+        <div class="candles">
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+            <div class="candle">
+                <div class="flame"></div>
+            </div>
+        </div>
+
+        <div class="top-icing"></div>
+
+        <div class="layer layer1"></div>
+        <div class="layer layer2"></div>
+        <div class="layer layer3"></div>
+    </div>
+
+    <div class="gallery">
+
+        <img src="m2.jpeg" style="background-size: cover;">
+        <img src="m7.jpeg" style="background-size: cover;">
+
+        <img src="m8.jpeg" style="background-size:;">
+
+        <img src="r2.jpeg" style="background-size: cover;">
+
+        <img src="r5.jpeg" style="background-size: cover;">
+        <img src="r6.jpeg" style="background-size: cover;">
+        <img src="r7.jpeg" style="background-size: cover;">
+
+        <img src="m5.jpeg" style="background-size: cover;">
+        <img src="m3.jpeg" style="background-size: cover;">
+        <img src="m4.jpeg" style="background-size: cover;">
+    </div>
+
+    <script>
+        const colors = ["#ff4d4d", "#ffcc00", "#66ff66", "#66ccff", "#ff99ff", "#ff884d"];
+
+        for (let i = 0; i < 20; i++) {
+            let b = document.createElement("div");
+            b.className = "balloon";
+            b.style.left = Math.random() * 100 + "vw";
+            b.style.background = colors[Math.floor(Math.random() * colors.length)];
+            b.style.animationDuration = 6 + Math.random() * 6 + "s";
+            document.body.appendChild(b);
+        }
+
+        for (let i = 0; i < 60; i++) {
+            let c = document.createElement("div");
+            c.className = "confetti";
+            c.style.left = Math.random() * 100 + "vw";
+            c.style.background = colors[Math.floor(Math.random() * colors.length)];
+            c.style.animationDuration = 3 + Math.random() * 3 + "s";
+            document.body.appendChild(c);
+        }
+    </script>
+
+</body>
+
+</html>
